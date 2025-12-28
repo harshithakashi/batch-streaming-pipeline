@@ -22,6 +22,14 @@ Local CSV file
 → Amazon S3 (Landing Zone)  
 → AWS Glue ETL Job  
 → Amazon S3 (Curated Zone) / Amazon RDS
+**Batch Flow (Simple Explanation)**
+
+1. A sample CSV file (`scripts/sample_data.csv`) is uploaded to Amazon S3 (Landing Zone).
+2. An AWS Glue ETL job reads the CSV from S3.
+3. Glue cleans and transforms the data.
+4. The transformed data is written to:
+   - Amazon S3 (Curated Zone) OR
+   - Amazon RDS for analytics and reporting.
 
 ### Streaming Pipeline
 
