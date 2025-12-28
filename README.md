@@ -1,40 +1,49 @@
-# Batch & Streaming Data Pipeline
+# Batch & Streaming Data Pipeline on AWS
 
-This project demonstrates a **simple end-to-end batch and streaming data pipeline on AWS**.
-It is designed for **beginners** to understand how data flows through modern cloud systems.
+## Problem Statement
 
----
+Modern data platforms must handle two types of data:
 
-## What this project shows
+- **Batch data** that arrives at fixed intervals (for example, daily CSV files)
+- **Streaming data** that arrives continuously in real time (for example, user events)
 
-- How batch data is processed using **AWS Glue**
-- How streaming data is processed using **Amazon Kinesis + AWS Lambda**
-- How data is stored in **Amazon S3** and **Amazon RDS**
-- How infrastructure is managed using **Terraform**
-- Clear separation of batch and streaming pipelines
+The challenge is to design a system that can process both batch and streaming data
+using the right AWS services while keeping the architecture simple and scalable.
 
----
+This project demonstrates a beginner-friendly design for handling batch and streaming
+data pipelines on AWS.
 
-## Architecture (High Level)
 
-### Batch Pipeline
-Local CSV file  
-→ Amazon S3 (Landing Zone)  
-→ AWS Glue ETL Job  
-→ Amazon S3 (Curated Zone) / Amazon RDS
-**Batch Flow (Simple Explanation)**
+## Architecture Diagram
 
-1. A sample CSV file (`scripts/sample_data.csv`) is uploaded to Amazon S3 (Landing Zone).
-2. An AWS Glue ETL job reads the CSV from S3.
-3. Glue cleans and transforms the data.
-4. The transformed data is written to:
-   - Amazon S3 (Curated Zone) OR
-   - Amazon RDS for analytics and reporting.
+![Architecture Diagram](img/architecture.png)
 
-### Streaming Pipeline
+## What I Learned
 
-In the streaming pipeline, data is processed in real time.
+- Difference between batch processing and streaming processing
+- How Amazon S3 is used as a data lake storage layer
+- How AWS Glue can perform batch ETL transformations
+- How Amazon Kinesis supports real-time ingestion
+- How AWS Lambda can process streaming events
+- How to structure a project repository like an AWS sample repo
 
-Events are sent to an Amazon Kinesis stream.
-AWS Lambda consumes the stream and processes each event.
-The processed data is stored in Amazon S3 or Amazon RDS.
+
+## Challenges Faced
+
+- Understanding when to use batch processing versus streaming processing
+- Designing a clear architecture without overcomplicating AWS services
+- Keeping the project beginner-friendly while still realistic
+- Structuring the repository to clearly explain the data flow
+
+
+## Deployment
+
+This project focuses on architecture and learning rather than full cloud deployment.
+
+- AWS services are represented using placeholders
+- The design follows real-world AWS data engineering patterns
+- The project is deployment-ready but avoids actual deployment to prevent unnecessary cloud costs
+
+
+
+  
