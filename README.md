@@ -1,4 +1,4 @@
-# Batch & Streaming Data Pipeline (Beginner Friendly)
+# Batch & Streaming Data Pipeline
 
 This project demonstrates a **simple end-to-end batch and streaming data pipeline on AWS**.
 It is designed for **beginners** to understand how data flows through modern cloud systems.
@@ -22,3 +22,11 @@ Local CSV file
 → Amazon S3 (Landing Zone)  
 → AWS Glue ETL Job  
 → Amazon S3 (Curated Zone) / Amazon RDS
+
+### Streaming Pipeline
+
+In the streaming pipeline, data is processed in real time.
+
+Events are sent to an Amazon Kinesis stream.
+AWS Lambda consumes the stream and processes each event.
+The processed data is stored in Amazon S3 or Amazon RDS.
