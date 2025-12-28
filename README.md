@@ -1,13 +1,24 @@
-# Batch & Streaming Data Pipeline on AWS
+# Batch & Streaming Data Pipeline (Beginner Friendly)
 
-End-to-end batch and streaming data pipelines built on AWS using:
+This project demonstrates a **simple end-to-end batch and streaming data pipeline on AWS**.
+It is designed for **beginners** to understand how data flows through modern cloud systems.
 
-- AWS Glue
-- Amazon S3
-- Amazon RDS
-- pgvector
-- Amazon Kinesis
-- AWS Lambda
-- Terraform
+---
 
-This project demonstrates scalable data ingestion, transformation, and orchestration using modern cloud-native tools
+## What this project shows
+
+- How batch data is processed using **AWS Glue**
+- How streaming data is processed using **Amazon Kinesis + AWS Lambda**
+- How data is stored in **Amazon S3** and **Amazon RDS**
+- How infrastructure is managed using **Terraform**
+- Clear separation of batch and streaming pipelines
+
+---
+
+## Architecture (High Level)
+
+### Batch Pipeline
+Local CSV file  
+→ Amazon S3 (Landing Zone)  
+→ AWS Glue ETL Job  
+→ Amazon S3 (Curated Zone) / Amazon RDS
