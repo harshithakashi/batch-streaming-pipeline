@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets / keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+credentials*
+*secret*
+*.tfstate
+*.tfstate.*
+
+# Data / outputs (keep repo clean)
+data/
+output/
+logs/
+*.csv
+*.json
+*.parquet
+
+# Mac / temp
+.Trash/
