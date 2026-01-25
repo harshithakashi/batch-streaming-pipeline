@@ -18,7 +18,9 @@ pipeline** that:
 
 ## Architecture Diagram
 
-![Architecture Diagram](img/architecture.png)
+
+![Batch & Streaming Architecture](img/architecture.png)
+
 
 ## What I Learned
 
