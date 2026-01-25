@@ -2,16 +2,18 @@
 
 ## Problem Statement
 
-Modern data platforms must handle two types of data:
+Modern applications require timely insights from both historical (batch) data
+and real-time (streaming) events to support operational and analytical use cases.
 
-- **Batch data** that arrives at fixed intervals (for example, daily CSV files)
-- **Streaming data** that arrives continuously in real time (for example, user events)
+Relying on batch processing alone introduces latency, while streaming systems
+without historical context limit deeper analysis.
 
-The challenge is to design a system that can process both batch and streaming data
-using the right AWS services while keeping the architecture simple and scalable.
-
-This project demonstrates a beginner-friendly design for handling batch and streaming
-data pipelines on AWS.
+The goal of this project is to design a **hybrid batch and streaming data
+pipeline** that:
+- Ingests real-time events and batch data from multiple sources
+- Processes data using scalable, event-driven components
+- Stores data in a centralized storage layer for downstream analytics
+- Supports low-latency access while maintaining historical accuracy
 
 
 ## Architecture Diagram
